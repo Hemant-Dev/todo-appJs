@@ -1,7 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 h1 {
   color: firebrick;
 }
 
 .container {
   background-color: lightblue;
+  height: 100vh;
 }

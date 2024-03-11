@@ -6,8 +6,9 @@ function craeateHeader(string) {
 
 function loadHeader() {
   const header = craeateHeader("Todo App");
-  const container = document.querySelector(".container");
-  container.appendChild(header);
+  // const container = document.querySelector(".container");
+  // container.appendChild(header);
+  return header;
 }
 
 export default loadHeader;
