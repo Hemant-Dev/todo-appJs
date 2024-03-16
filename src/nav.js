@@ -1,4 +1,5 @@
-import { createTodo, refrestTodoList, todos } from "./todo";
+import { format } from "date-fns";
+import { refreshTodoList, todos, createTodo } from "./todo";
 function loadNav() {
   const nav = document.createElement("nav");
   nav.classList.add("nav-container");
@@ -15,11 +16,12 @@ function createButton(name) {
 }
 
 function handleAddClick() {
-  const todo = createTodo("Buy Groceries", "But Amul Milk from local store");
-  todos.push(createTodo("Buy Monitor", "Get a good 27' from Amazon"));
-  todos.push(todo);
-  refrestTodoList();
-  alert(`Add Btn is clicked`);
+  let date = format(new Date(2024, 1, 1), "yyyy-mm-dd");
+  todos.push(
+    createTodo("Buy Monitor", "Get a good 27' from Amazon", date, "High")
+  );
+  refreshTodoList();
+  //   alert(`Add Btn is clicked`);
 }
 
 export default loadNav;
